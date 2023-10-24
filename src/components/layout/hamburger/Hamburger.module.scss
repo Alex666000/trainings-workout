@@ -17,6 +17,15 @@
 		> svg > path {
 			fill: #fff;
 		}
+
+		&:hover,
+		&:active {
+			/* Анимация для изменения цвета иконки при наведении и клике */
+			svg > path {
+				fill: $accent; /* Используйте переменную с нужным цветом */
+				transition: fill 0.4s ease; /* Добавьте плавный переход */
+			}
+		}
 	}
 
 	.menu {
@@ -25,7 +34,7 @@
 		right: 0;
 		background-color: #fff;
 		padding: 10px 12px;
-		font-size: 14px;
+		font-size: 16px;
 		box-shadow: $bx-16;
 		border-radius: 10px 0 10px 10px;
 		min-width: 116px;
@@ -38,6 +47,10 @@
 
 		> ul {
 			list-style: none;
+
+			button {
+				font-size: 16px;
+			}
 
 			a {
 				color: #000;
