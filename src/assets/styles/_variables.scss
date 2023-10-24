@@ -2,9 +2,9 @@
 
 $accent: #b53471;
 $white: #f1e8e8;
-$black: #1a0612;
+$black: darken($accent, 38%); // сильно-темный
 // Темные тона:
-$hard-dark-accent: darkest($accent, 30%); // сильно-темный
+$hard-dark-accent: darken($accent, 20%);
 $dark-accent: darkest($accent, 18%); // темный
 
 /* Макеты: https://dribbble.com/shots/17358553-Sportly-Running-Record-Stats-Activity-Log-and-Challenge */
