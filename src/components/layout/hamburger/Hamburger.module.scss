@@ -1,5 +1,5 @@
-@import "src/assets/styles/variables";
-@import "src/assets/styles/animations";
+@import 'src/assets/styles/variables';
+@import 'src/assets/styles/animations';
 
 .wrapper {
 	position: relative;
@@ -9,6 +9,14 @@
 		border: none;
 		outline: none;
 		cursor: pointer;
+	}
+
+	> button {
+		font-size: 30px;
+
+		> svg > path {
+			fill: #fff;
+		}
 	}
 
 	.menu {

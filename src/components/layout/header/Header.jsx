@@ -1,6 +1,11 @@
-import styles from "./Header.module.scss"
-import { useAuth } from "../../../hooks/useAuth.js"
-import Hamburger from "../hamburger/Hamburger.jsx"
+import { IoMdArrowBack } from 'react-icons/io'
+
+import { useAuth } from '../../../hooks/useAuth.js'
+
+import Hamburger from '../hamburger/Hamburger.jsx'
+
+import styles from './Header.module.scss'
+
 
 const Header = ({ backLink }) => {
 	/* TODO: React router useHistory */
@@ -9,7 +14,9 @@ const Header = ({ backLink }) => {
 
 	return (
 		<header className={styles.header}>
-			<button>FiArrowLeft</button>
+			<button>
+				<IoMdArrowBack />
+			</button>
 			{/* User profile */}
 			<Hamburger />
 		</header>
