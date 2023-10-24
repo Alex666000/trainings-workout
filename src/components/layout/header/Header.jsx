@@ -1,11 +1,7 @@
 import { IoMdArrowBack } from 'react-icons/io'
-
 import { useAuth } from '../../../hooks/useAuth.js'
-
 import Hamburger from '../hamburger/Hamburger.jsx'
-
 import styles from './Header.module.scss'
-
 
 const Header = ({ backLink }) => {
 	/* TODO: React router useHistory */

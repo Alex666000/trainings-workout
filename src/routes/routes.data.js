@@ -1,5 +1,5 @@
 import Auth from '../components/screens/auth/Auth'
-import Home from '../components/screens/home/Home.jsx'
+import Home from '../components/screens/home/Home'
 import NewWorkout from '../components/screens/new-workout/NewWorkout'
 import Profile from '../components/screens/profile/Profile'
 
@@ -7,46 +7,46 @@ export const routes = [
 	{
 		path: '/',
 		component: Home,
-		auth: false // для каких страниц нужна авторизация
+		isAuth: false
 	},
 	{
 		path: '/auth',
 		component: Auth,
-		auth: false
+		isAuth: false
 	},
 	{
 		path: '/new-workout',
 		component: NewWorkout,
-		auth: true
+		isAuth: true
 	},
 	{
 		path: '/profile',
 		component: Profile,
-		auth: true
+		isAuth: false
 	} /*
 	{
 		path: '/new-exercise',
 
 		component: NewExercise,
-		auth: true,
+		isAuth: true,
 	},
 
 	{
 		path: '/workout/:id',
 
 		component: SingleWorkout,
-		auth: true,
+		isAuth: true,
 	},
 	{
 		path: '/workouts',
 
 		component: ListWorkouts,
-		auth: true,
+		isAuth: true,
 	},
 	{
 		path: '/exercise/:id',
 
 		component: SingleExercise,
-		auth: true,
+		isAuth: true,
 	}, */
 ]
