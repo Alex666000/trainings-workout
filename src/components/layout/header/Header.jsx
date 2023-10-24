@@ -1,7 +1,19 @@
-import styles from './Header.module.scss'
+import styles from "./Header.module.scss"
+import { useAuth } from "../../../hooks/useAuth.js"
+import Hamburger from "../hamburger/Hamburger.jsx"
 
-const Header = () => {
-	return <div className={styles.header}>Header</div>
+const Header = ({ backLink }) => {
+	/* TODO: React router useHistory */
+
+	const { isAuth } = useAuth()
+
+	return (
+		<header className={styles.header}>
+			<button>FiArrowLeft</button>
+			{/* User profile */}
+			<Hamburger />
+		</header>
+	)
 }
 
 export default Header

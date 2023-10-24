@@ -3,8 +3,9 @@
 $accent: #b53471;
 $white: #f1e8e8;
 $black: #1a0612;
-$hard-dark-accent: darkest($accent, 30%);
-$dark-accent: darkest($accent, 18%);
+// Темные тона:
+$hard-dark-accent: darkest($accent, 30%); // сильно-темный
+$dark-accent: darkest($accent, 18%); // темный
 
 /* Макеты: https://dribbble.com/shots/17358553-Sportly-Running-Record-Stats-Activity-Log-and-Challenge */
 
@@ -13,5 +14,5 @@ $bx-16: 0 3px 6px rgba(0, 0, 0, 0.16);
 
 $default-font: 'Sofia Sans', sans-serif;
 
-// мобилки
+// Мобилки
 $mobile: 480px;
