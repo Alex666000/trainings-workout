@@ -1,6 +1,7 @@
-import Cookies from "js-cookie"
+import Cookies from 'js-cookie'
 
-import { $axios } from "../api"
+import { $axios } from '../api'
+import { TOKEN } from '../app.constants'
 
 class AuthService {
 	async main(email, password, type) {
@@ -10,8 +11,7 @@ class AuthService {
 				password
 			})
 
-			// Когда данные пришли записали в куки
-			if (data.token) Cookies.set("token", data.token)
+			if (data.token) Cookies.set(TOKEN, data.token)
 
 			return data
 		} catch (error) {
@@ -20,8 +20,4 @@ class AuthService {
 	}
 }
 
-export default new AuthService() // экземпляр клааса!
-
-// type - login or register т.е эндпоинт: http:localhost/auth/register
-
-// main - или логи или регистрация - сделали общий...
+export default new AuthService()

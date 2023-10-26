@@ -12,9 +12,8 @@ const Router = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
-				{routes.map((route) => {
+				{routes.map(route => {
 					if (route.isAuth && !isAuth) {
-						// если пользователь не авторизован
 						return false
 					}
 

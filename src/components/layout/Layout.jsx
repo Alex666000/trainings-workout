@@ -1,12 +1,17 @@
-import Header from "./header/Header"
-import cn from "clsx"
-import styles from "./Layout.module.scss"
+import cn from 'clsx'
 
-const Layout = ({ children, bgImage, heading = "", backLink = "/" }) => {
+import { useCheckToken } from '../../hooks/useCheckToken'
+
+import styles from './Layout.module.scss'
+import Header from './header/Header'
+
+const Layout = ({ children, bgImage, heading = '', backLink = '/' }) => {
+	useCheckToken()
+
 	return (
 		<section
 			className={cn(styles.wrapper, {
-				[styles.otherPage]: !!heading // если есть текст
+				[styles.otherPage]: !!heading
 			})}
 			style={{ backgroundImage: `url(${bgImage})` }}
 		>
@@ -20,8 +25,3 @@ const Layout = ({ children, bgImage, heading = "", backLink = "/" }) => {
 }
 
 export default Layout
-
-/*
-heading - надпись на фоне
-backLink - по дефолту на главную страницу, прокинем в Хедер
- */

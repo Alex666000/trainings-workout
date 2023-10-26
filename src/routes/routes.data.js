@@ -5,14 +5,14 @@ import Profile from '../components/screens/profile/Profile'
 
 export const routes = [
 	{
-		path: '/',
-		component: Home,
-		isAuth: false
-	},
-	{
 		path: '/auth',
 		component: Auth,
 		isAuth: false
+	},
+	{
+		path: '/',
+		component: Home,
+		isAuth: true
 	},
 	{
 		path: '/new-workout',
@@ -22,8 +22,8 @@ export const routes = [
 	{
 		path: '/profile',
 		component: Profile,
-		isAuth: false
-	} /*
+		isAuth: true
+	} /* 
 	{
 		path: '/new-exercise',
 
@@ -35,7 +35,7 @@ export const routes = [
 		path: '/workout/:id',
 
 		component: SingleWorkout,
-		isAuth: true,
+		auth: true,
 	},
 	{
 		path: '/workouts',
