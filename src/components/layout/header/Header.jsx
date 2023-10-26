@@ -1,11 +1,11 @@
-import { IoMdArrowBack } from 'react-icons/io'
-import { SlUser } from 'react-icons/sl'
-import { useLocation, useNavigate } from 'react-router-dom'
-import { useAuth } from '../../../hooks/useAuth'
-import Hamburger from '../hamburger/Hamburger'
-import styles from './Header.module.scss'
+import { IoMdArrowBack } from "react-icons/io"
+import { SlUser } from "react-icons/sl"
+import { useLocation, useNavigate } from "react-router-dom"
+import { useAuth } from "../../../hooks/useAuth"
+import Hamburger from "../hamburger/Hamburger"
+import styles from "./Header.module.scss"
 
-const Header = ({ backLink = '' }) => {
+const Header = ({ backLink = "" }) => {
 	const { pathname } = useLocation()
 	const navigate = useNavigate()
 
@@ -13,7 +13,7 @@ const Header = ({ backLink = '' }) => {
 
 	return (
 		<header className={styles.header}>
-			{pathname !== '/' ? (
+			{pathname !== "/" ? (
 				// путь по которому когда открыто приложение – если у нас
 				// не главная страница, а другая то отображаем
 				// стрелку назад иначе отобразим кнопку профиля
@@ -27,7 +27,7 @@ const Header = ({ backLink = '' }) => {
 			) : (
 				<button
 					onClick={() => {
-						navigate('/profile')
+						navigate(isAuth ? "/profile" : "/auth")
 					}}
 				>
 					<SlUser fill='#fff' fontSize={25} /> {/* Иконка профиля */}
